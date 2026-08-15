@@ -1,7 +1,5 @@
 # Bellman-Ford
 
-## Features
-
 * Finds the **shortest distance and all shortest paths** from `src` to `dest`.
 * Handles **negative edge weights**.
 * Detects **reachable negative-weight cycles**.
