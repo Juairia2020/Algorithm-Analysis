@@ -14,15 +14,12 @@ D[i][j] = min(D[i][j], D[i][k] + D[k][j])
 
 The implementation also stores the corresponding paths.
 
----
-
 ## 2. Assumptions
 
 - The graph is weighted.
 - Negative edge weights are allowed.
 - The graph must not contain a negative-weight cycle.
 
----
 
 ## 3. Correctness
 
@@ -37,7 +34,6 @@ The algorithm chooses the smaller of these two values. Therefore, after all vert
 
 When a shorter path is found through `k`, the stored path is formed by combining the paths from `i` to `k` and from `k` to `j`. Thus, path information remains consistent with the distance matrix.
 
----
 
 ## 4. Negative Cycle Detection
 
@@ -57,7 +53,6 @@ for any vertex `i`, then the graph contains a negative-weight cycle reachable fr
 
 In that case, shortest paths involving the cycle are undefined because repeatedly traversing the cycle can reduce the path cost indefinitely.
 
----
 
 ## 5. Complexity Analysis
 
@@ -87,7 +82,6 @@ space.
 
 The path matrix may require additional memory depending on the number and length of stored paths. Without explicit path storage, Floyd-Warshall uses `O(V²)` space.
 
----
 
 ## 7. Advantages and Limitations
 
@@ -105,8 +99,6 @@ The path matrix may require additional memory depending on the number and length
 - Requires `O(V²)` space, even for sparse graphs.
 - Negative-weight cycles make shortest paths undefined.
 - Storing complete paths increases memory usage.
-
----
 
 ## 8. When to Use It
 
