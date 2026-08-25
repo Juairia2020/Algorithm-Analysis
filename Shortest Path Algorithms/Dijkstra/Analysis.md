@@ -15,9 +15,6 @@ The algorithm repeatedly selects the unvisited vertex with the smallest known di
 - Zero-weight edges are allowed.
 - The current implementation uses an undirected graph.
 - The graph may contain multiple shortest paths between two vertices.
-- Unreachable destinations are detected.
-- Vertices are numbered from `0` to `V - 1`.
-- `long long` should be used when edge weights or accumulated distances may be large.
 
 ## 3. Correctness
 
