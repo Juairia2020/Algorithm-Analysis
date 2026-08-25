@@ -10,7 +10,6 @@ The algorithm repeatedly relaxes every edge. After at most `V - 1` iterations, w
 
 The implementation also stores predecessor information to reconstruct shortest paths and can generate **all shortest paths** when multiple shortest routes exist.
 
----
 
 ## 2. Assumptions
 
@@ -18,13 +17,7 @@ The implementation also stores predecessor information to reconstruct shortest p
 - The graph may be directed.
 - Negative edge weights are allowed.
 - A negative-weight cycle reachable from the source makes shortest distances undefined.
-- Vertices are numbered from `0` to `V - 1`.
-- Unreachable vertices are identified separately from reachable vertices.
 - Multiple shortest paths between two vertices may exist.
-- Path reconstruction must avoid cycles in the predecessor structure.
-- `long long` should be used when edge weights or accumulated distances may be large.
-
----
 
 ## 3. Correctness
 
@@ -64,8 +57,6 @@ A reconstructed path is valid because every predecessor relation corresponds to 
 
 The implementation also prevents cycles in the predecessor graph during reconstruction, ensuring that path generation terminates.
 
----
-
 ## 4. Negative Cycle Detection
 
 After `V - 1` relaxation passes, every edge is checked once more.
@@ -85,8 +76,6 @@ Because Bellman-Ford only considers vertices reachable from `src`, this indicate
 A reachable negative cycle makes the shortest distance undefined because the cycle can be traversed repeatedly to decrease the path cost indefinitely.
 
 Unreachable negative cycles do not affect shortest paths from the chosen source.
-
----
 
 ## 5. Complexity Analysis
 
@@ -152,7 +141,6 @@ space is required.
 
 Storing all shortest paths may require substantially more memory.
 
----
 
 ## 6. Advantages and Limitations
 
@@ -173,8 +161,6 @@ Storing all shortest paths may require substantially more memory.
 - Storing and printing all shortest paths can be extremely expensive.
 - The number of shortest paths may be exponential.
 - Zero-weight cycles can produce infinitely many shortest **walks**, so "all shortest paths" should normally refer to simple shortest paths.
-
----
 
 ## 7. When to Use It
 
