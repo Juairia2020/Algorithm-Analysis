@@ -8,8 +8,6 @@ Given a source vertex `src`, it computes the shortest distance from `src` to eve
 
 The algorithm repeatedly selects the unvisited vertex with the smallest known distance and relaxes its outgoing edges.
 
----
-
 ## 2. Assumptions
 
 - The graph is weighted.
@@ -20,8 +18,6 @@ The algorithm repeatedly selects the unvisited vertex with the smallest known di
 - Unreachable destinations are detected.
 - Vertices are numbered from `0` to `V - 1`.
 - `long long` should be used when edge weights or accumulated distances may be large.
-
----
 
 ## 3. Correctness
 
@@ -63,8 +59,6 @@ Therefore, after termination, the stored distance of every reachable vertex is i
 
 The predecessor information can then be used to reconstruct the corresponding shortest paths.
 
----
-
 ## 4. Unreachable Vertices
 
 If a vertex cannot be reached from `src`, its distance remains infinity.
@@ -73,7 +67,6 @@ Such a vertex is reported as unreachable rather than attempting to reconstruct a
 
 Therefore, Dijkstra's algorithm naturally handles disconnected graphs.
 
----
 
 ## 5. Complexity Analysis
 
@@ -129,8 +122,6 @@ space is required.
 
 Storing all shortest paths may require substantially more memory.
 
----
-
 ## 6. Advantages and Limitations
 
 ### Advantages
@@ -150,8 +141,6 @@ Storing all shortest paths may require substantially more memory.
 - Storing and printing all shortest paths can be extremely expensive.
 - The number of shortest paths may be exponential.
 - `long long` should be used for very large edge weights or accumulated distances.
-
----
 
 ## 7. When to Use It
 
