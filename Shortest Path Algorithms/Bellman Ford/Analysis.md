@@ -162,16 +162,6 @@ Storing all shortest paths may require substantially more memory.
 - The number of shortest paths may be exponential.
 - Zero-weight cycles can produce infinitely many shortest **walks**, so "all shortest paths" should normally refer to simple shortest paths.
 
-## 7. When to Use It
-
-Bellman-Ford is a good choice when:
-
-- Shortest paths are required from a **single source**.
-- The graph may contain negative edge weights.
-- Detection of reachable negative-weight cycles is required.
-- The graph is relatively sparse.
-- The `O(VE)` running time is acceptable.
-
 For graphs with only non-negative edge weights, Dijkstra's algorithm is generally more efficient.
 
 For finding shortest paths between **all pairs** of vertices, Floyd-Warshall or Johnson's algorithm may be more appropriate.
