@@ -100,14 +100,4 @@ The path matrix may require additional memory depending on the number and length
 - Negative-weight cycles make shortest paths undefined.
 - Storing complete paths increases memory usage.
 
-## 8. When to Use It
-
-Floyd-Warshall is a good choice when:
-
-- Shortest paths between all pairs are required.
-- The graph has a relatively small number of vertices.
-- The graph is dense.
-- Negative edge weights may occur.
-- An `O(V³)` solution is acceptable.
-
 For large sparse graphs, algorithms such as Johnson's algorithm are usually more efficient.
