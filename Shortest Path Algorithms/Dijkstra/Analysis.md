@@ -139,16 +139,6 @@ Storing all shortest paths may require substantially more memory.
 - The number of shortest paths may be exponential.
 - `long long` should be used for very large edge weights or accumulated distances.
 
-## 7. When to Use It
-
-Dijkstra's algorithm is a good choice when:
-
-- Shortest paths are required from a **single source**.
-- All edge weights are **non-negative**.
-- The graph is relatively sparse.
-- Efficient shortest-path computation is required.
-- An `O(E log V)` solution is acceptable.
-
 For graphs containing negative edge weights, **Bellman-Ford** is more appropriate.
 
 For finding shortest paths between **all pairs** of vertices, **Floyd-Warshall** or **Johnson's algorithm** may be more appropriate.
