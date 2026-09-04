@@ -59,9 +59,6 @@ This implementation:
 
 - Prim is designed for **weighted, undirected graphs**.
 - A standard implementation assumes the graph is connected. For disconnected graphs, a single MST does not exist.
-- Prim finds an MST but does not inherently determine whether the MST is **unique**.
-- Prim does not inherently find the **lexicographically smallest MST** when multiple MSTs exist.
-- Prim does not detect whether the **original graph contains cycles**.
 - The performance depends on the data structure used to select the minimum-key vertex.
 
 
