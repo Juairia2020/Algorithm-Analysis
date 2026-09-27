@@ -52,7 +52,7 @@ bool valid(DSU &dsu, Edge &e, int wt, int st, int V, int target) {
 }
 
 
-//Recursive function
+//To take or not to take?
 
 pair<int, vector<Edge>> solve(DSU dsu, vector<Edge>&st, int V, int target, int weight, int idx){
 
